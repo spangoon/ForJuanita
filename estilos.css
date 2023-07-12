@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+}
+
+.contenedor{
+    background-image:url(fondo-san-valentin-corazones-color-rosa_1308-37924.avif);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+p{
+    font-size: xx-large;
+    padding: 15%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    font-size: xx-large;
+    padding: 0.75em;
+    border-radius:25px;
+    background:linear-gradient(
+        45deg,
+        red,blue,deeppink,blue,red,deeppink,blue,pink);
+        background-size:800%;
+    cursor:pointer;
+    border:none;
+    padding:16px 32px;
+    color: antiquewhite;
+    font-size:24;
+    font-weight:bold;
+}
+
+button::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+    45deg,
+    red,blue,deeppink,blue,red,deeppink,blue,pink);
+    background-size:800%;
+    border-radius:10px;
+    filter:blur(8px);
+   animation: glowing 20s linear infinite
+
+}
+
+
+
+#yesBtn{
+    transform: translate(-100%,0);
+}
+
+#noBtn{
+    position: absolute;
+}
+
+/*Late*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    background: linear-gradient(45deg,pink,violet);
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fa-heart {
+    color: rgb(60, 0, 60);
+    font-size: 25px;
+    position: absolute;
+    animation:  heartMove linear 1;
+    top: -10vh;
+    z-index: 0;
+}
+
+@keyframes heartMove {
+    0%{
+        transform: translateY(-10vh) ;
+    }
+    100%{
+        transform: translateY(110vh) ;
+    }
+}
